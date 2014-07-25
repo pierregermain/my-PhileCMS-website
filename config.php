@@ -7,5 +7,14 @@ $config = array();
 // must not be empty
 $config['encryptionKey'] = 'KUW54q5LkHsJ]IZi)FmsXPb[j|F}}NxV=n=rXBp3ao5YwE{e/|gPCj8z9?hwNy=R';
 
+$config['plugins'] = array(
+        'phileDemoPlugin'                => array('active' => false),
+        'phileParserMarkdown'            => array('active' => true), // the default parser
+        'phileParserMeta'                => array('active' => true), // the default parser
+        'phileTemplateTwig'              => array('active' => true), // the default template engine
+        'philePhpFastCache'              => array('active' => false), // the default cache engine
+        'phileSimpleFileDataPersistence' => array('active' => true), // the default data storage engine
+);
+
 // it is important to return the $config array!
 return $config;
