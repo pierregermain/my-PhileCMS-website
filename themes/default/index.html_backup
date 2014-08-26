@@ -32,23 +32,22 @@
 	</header>
 	<section id="content">
 		<div class="inner"> 
-			<!--h5>INDEX TEMPLATE </h5-->
+			<h1>INDEX TEMPLATE </h1>
 			{{content}}
 
 			{# loop through all the pages #}
 			{% for post in pages %}
 			{% if post.meta.date %} 
 			{% if post.meta.role == 'News' %}
-		    <!--h3> Date: {{ post.meta.date |date(config.date_format) }} </h3-->
-			{# post.url #}
+		    <h3> Date: {{ post.meta.date |date(config.date_format) }} </h3>
+			{{ post.url }}
 
                 <div class="post">
                         <h3><a href="{{ page.url }}">{{ page.title }}</a></h3> 
                         <h4><p class="meta">{{ post.meta.title }}</p></h4>
-		    <h5> Date: {{ post.meta.date |date(config.date_format) }} </h5>
                         <p class="meta">{{ post.meta.excerpt }}</p>
                         <p class="excerpt">{{ post.content }}</p>
-                <!--/div-->
+                </div>
 
 
 
